@@ -1,0 +1,151 @@
+/* General style */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: hsl(218, 23%, 16%);
+}
+
+/* Text style */
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('font/Manrope-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ManropeBolt';
+    src: url('font/Manrope-SemiBold.ttf') format('truetype');
+}
+
+.advice-number {
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    color: hsl(150, 100%, 66%);
+    letter-spacing: 0.3em;
+}
+
+.text-message {
+    font-family: 'ManropeBolt', sans-serif;
+    font-size: 28px;
+    color: hsl(193, 38%, 86%);
+}
+
+/* Container Card style */
+
+.container {
+    position: relative;
+    width: 600px;
+    height: 100%;
+    margin: 2em auto;
+    background-color: hsl(217, 19%, 24%);
+    border-radius: 15px;
+}
+
+
+.card-title {
+    padding: 4em 4em 0em 4em;
+    text-align: center;
+}
+
+.card-message {
+    margin: 2em 4em;
+    text-align: center;
+}
+
+.card-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0em 4em 4em 4em;
+}
+
+.image-divider {
+    content: url(./images/pattern-divider-desktop.svg);
+}
+
+.card-icon {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: hsl(150, 100%, 66%);
+    border-radius: 50%;
+    border: transparent;
+    width: 60px;
+    height: 60px;
+}
+
+.card-icon:hover,
+.card-icon:focus {
+    box-shadow: 0 0.3em 2em 0.3em hsl(150, 100%, 66%);
+    cursor: pointer;
+}
+
+.icon-dice {
+    content: url(./images/icon-dice.svg);
+}
+
+/* Footer style */
+
+.attribution {
+    margin: 4em;
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    text-align: center;
+    color: hsl(193, 38%, 86%);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Responsive style */
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .card-title {
+        padding: 4em 2em 0em 2em;
+    }
+
+    .card-message {
+        margin: 2em 2em;
+    }
+
+    .card-divider {
+        padding: 0em 2em 4em 2em;
+    }
+
+    .image-divider {
+        content: url(./images/pattern-divider-mobile.svg);
+        max-width: -webkit-fill-available
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .advice-number {
+        font-size: 14px;
+    }
+
+    .text-message {
+        font-size: 20px;
+    }
+
+}
